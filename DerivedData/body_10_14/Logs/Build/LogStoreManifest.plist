@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>logFormatVersion</key>
+	<integer>10</integer>
+	<key>logs</key>
+	<dict>
+		<key>44CC6D13-F44A-41A3-A4F2-34EF2D024FC2</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>44CC6D13-F44A-41A3-A4F2-34EF2D024FC2.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>body_10_14 project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>body_10_14 Debug</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build body_10_14 Debug</string>
+			<key>timeStartedRecording</key>
+			<real>593043316.95435798</real>
+			<key>timeStoppedRecording</key>
+			<real>593043324.69498396</real>
+			<key>title</key>
+			<string>Build body_10_14 Debug</string>
+			<key>uniqueIdentifier</key>
+			<string>44CC6D13-F44A-41A3-A4F2-34EF2D024FC2</string>
+		</dict>
+		<key>E49E9C7F-9DB5-427D-BD71-F2F2234E04F5</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>E49E9C7F-9DB5-427D-BD71-F2F2234E04F5.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>body_10_14 project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>body_10_14 Debug</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build body_10_14 Debug</string>
+			<key>timeStartedRecording</key>
+			<real>593313463.62042403</real>
+			<key>timeStoppedRecording</key>
+			<real>593313466.34964097</real>
+			<key>title</key>
+			<string>Build body_10_14 Debug</string>
+			<key>uniqueIdentifier</key>
+			<string>E49E9C7F-9DB5-427D-BD71-F2F2234E04F5</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

@@ -14,10 +14,10 @@ public:
     void update();
     void draw();
     void fluctuate();
+    void trackVelocity();
+    void createPath();
 
-    void keyPressed(int key);
     
-    void switchFluc(int speed);
     
     
     
@@ -52,8 +52,10 @@ public:
     ofPolyline smoothPoly;
     ofPath pathFromContour;//path to be built
     std::vector<ofPolyline> pp;
+    std::vector<ofPolyline> pathPolys;
+    std::vector<ofMesh> meshVector;
     ofFbo fbo;
-    
+        int nextIndexToWrite;
     ofVec2f velocity;
     ofMesh lineMesh;
     ofVboMesh vboMesh;
@@ -74,6 +76,16 @@ public:
     float time;
     int kinectInput;
     char kinectC;
+    
+    ofPath pathFromPoly;
+    
+    
+    ofxCv::FlowFarneback fb;
+    ofxCv::FlowPyrLK lk;
+    
+    ofxCv::Flow* curFlow;
+    float pointSize;
+
 private:
     of3dPrimitive prim;
     ofBoxPrimitive geometry;

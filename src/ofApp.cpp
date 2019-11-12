@@ -5,15 +5,6 @@ using namespace cv;
 
 //--------------------------------------------------------------
 
-template<typename FUNCTION>
-inline void timed_loop(unsigned long long millis, FUNCTION f)
-{
-    unsigned long long t1 = ofGetElapsedTimeMillis();
-    while(ofGetElapsedTimeMillis() - t1 < millis)
-    {
-        f();
-    }
-}
 
 void ofApp::setup() {
 

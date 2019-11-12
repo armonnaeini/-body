@@ -17,7 +17,7 @@ void ofApp::setup() {
     kinect.open();
     
     ofSetVerticalSync(true);
-    ofBackground(255, 255, 255);
+    ofBackground(25, 25, 25);
     ofEnableAlphaBlending();
     ofEnableAntiAliasing();
     ofEnableSmoothing();
@@ -53,7 +53,7 @@ void ofApp::setup() {
     texture.allocate(50, 50, OF_IMAGE_COLOR);
     bFluctuate = false;
     time = ofGetElapsedTimef();
-    pointSize = 6;
+    pointSize = 2;
 }
 
 //--------------------------------------------------------------
@@ -67,8 +67,14 @@ void ofApp::update() {
     kinectInput = kinect.isConnected();
     kinectC = char(kinectInput);
     
+    
+
+    
     switch(kinectInput){
           case 0:
+            throw std::exception();
+            break;
+        case -1:
             throw std::exception();
             break;
     }
@@ -104,116 +110,52 @@ void ofApp::update() {
 void ofApp::draw() {
 
     ofSetColor( 0, 0, 0 );
-
     glScalef(-2.05,2.05,2.05);
-    ofTranslate(-650, -100, 0);
+    ofTranslate(-600, 20, 0);
     glPointSize(pointSize);
 
-//    lineMesh.draw();
-
     for (int i = 0; i < meshVector.size(); i++){
-
         meshVector[i].setMode(OF_PRIMITIVE_POINTS);
         meshVector[i].draw();
     }
+    
     createPath();
-
-
-   
-}
-
-void ofApp::fluctuate(){
-    ofMesh temp;
-    for(int i = 0; i < pp.size(); i++) {
-        pp[i] = pp[i].getSmoothed(5);
-        for (int j = 0; j < pp[i].size(); j+=1){
-            col.r = 200;
-            col.g = 20;
-            col.b = 20;
-                         
-            temp.addColor(col);
-            temp.addVertex(pp[i][j]);
-                         
-            lineMesh.addColor(col);
-            lineMesh.addVertex(pp[i][j]);
-        }
-    }
-    meshVector.push_back(temp);
 }
 
 
 void ofApp::trackVelocity(){
     for (int i = 0; i < contourFinder.size(); i++){
-        ofVec2f velocity = toOf(contourFinder.getVelocity(i));
-        int velocityX = abs(velocity.x);
-        int velocityY = abs(velocity.y);
-        
+      
         ofMesh tempMesh;
         ofPolyline polyNew = contourFinder.getPolyline(i);
-        polyNew = polyNew.getSmoothed(50);
         
-        if (velocityX > 0 || velocityY > 0){
-            col.r = ofRandom(255);
-            col.g = ofRandom(255);
-            col.b = ofRandom(255);
-            for (int x = 0; x < polyNew.size(); x++){
-//                col.r = 0;
-//                col.g = 200;
-//                col.b = 200;
-                                                 
+        polyNew = polyNew.getSmoothed(50);
+        col.r = ofRandom(0,1);
+        col.g = ofRandom(239, 240);
+        col.b = ofRandom(244,255);
+        
+        for (int x = 0; x < polyNew.size(); x++){
                 tempMesh.addColor(col);
                 tempMesh.addVertex(polyNew[x]);
-            }
-            
-            const std::size_t MAX_BUFFER_SIZE = 100;
-            
-            if (meshVector.size() < MAX_BUFFER_SIZE){
-                meshVector.push_back(tempMesh);
-                nextIndexToWrite = meshVector.size();
-            }else{
-                meshVector[nextIndexToWrite] = tempMesh;
-            }
-            
-            nextIndexToWrite = (nextIndexToWrite + 1) % MAX_BUFFER_SIZE;
-
         }
-        
-        
-        
-        
-        
-        
-        /*
-        if (velocityX > 0 || velocityY > 0){
-            bFluctuate = true;
-//            fluctuate();
-            ofMesh temp;
-            ofPolyline polyNew = contourFinder.getPolyline(i);
             
-            for (int x = 0; x < polyNew.size(); x++){
-                col.r = 200;
-                col.g = 20;
-                col.b = 20;
-                                      
-                temp.addColor(col);
-                temp.addVertex(polyNew[x]);
-            }
-            meshVector.push_back(temp);
+        const std::size_t MAX_BUFFER_SIZE = 100;
+            
+        if (meshVector.size() < MAX_BUFFER_SIZE){
+            meshVector.push_back(tempMesh);
+               nextIndexToWrite = meshVector.size();
+        }else{
+            meshVector[nextIndexToWrite] = tempMesh;
         }
-        else{ 
-            bFluctuate = false;
-            lineMesh.clear();
-            meshVector.clear();
-        
+        nextIndexToWrite = (nextIndexToWrite + 1) % MAX_BUFFER_SIZE;
     }
-}*/
 }
-}
+
 
 void ofApp::createPath(){
     ofPath newPath;
     
-    for(int i = 0; i < pp.size(); i++) {
+    for(int i = 0; i < pp.size(); i+=1) {
         pathPolys[i] = pathPolys[i].getSmoothed(50);
         for(int j = 0; j < pathPolys[i].size(); j++) {
             if(j == 0) {
@@ -225,8 +167,6 @@ void ofApp::createPath(){
         }
         newPath.close();
         newPath.setColor(ofColor(0,255,255));
-//        newPath.setColor(ofColor(0, 255, 255, 100));
-//        ofEnableAlphaBlending();
     }
      newPath.draw();
 }

@@ -13,7 +13,6 @@ public:
     void setup();
     void update();
     void draw();
-    void fluctuate();
     void trackVelocity();
     void createPath();
 

@@ -6,6 +6,34 @@
 	<integer>10</integer>
 	<key>logs</key>
 	<dict>
+		<key>60C87E98-1C4E-4C00-9451-D4565F8C9488</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogMajorGroupSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.target.product-type.application</string>
+			<key>fileName</key>
+			<string>60C87E98-1C4E-4C00-9451-D4565F8C9488.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>signature</key>
+			<string>body_10_14-fujugwrtuutbhxdbvisejdcmkrrx</string>
+			<key>timeStartedRecording</key>
+			<real>595285636.88758802</real>
+			<key>timeStoppedRecording</key>
+			<real>595285655.65075099</real>
+			<key>title</key>
+			<string>Build target body_10_14</string>
+			<key>uniqueIdentifier</key>
+			<string>60C87E98-1C4E-4C00-9451-D4565F8C9488</string>
+		</dict>
 		<key>76D15BC3-1986-4592-84D6-38E6F0DA5CF5</key>
 		<dict>
 			<key>className</key>
@@ -33,34 +61,6 @@
 			<string>Build target body_10_14</string>
 			<key>uniqueIdentifier</key>
 			<string>76D15BC3-1986-4592-84D6-38E6F0DA5CF5</string>
-		</dict>
-		<key>E5D1AE84-B9DD-4F5A-B9E2-F94E90868C98</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogMajorGroupSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.target.product-type.application</string>
-			<key>fileName</key>
-			<string>E5D1AE84-B9DD-4F5A-B9E2-F94E90868C98.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>signature</key>
-			<string>body_10_14-fujugwrtuutbhxdbvisejdcmkrrx</string>
-			<key>timeStartedRecording</key>
-			<real>595036133.15943503</real>
-			<key>timeStoppedRecording</key>
-			<real>595036143.14549506</real>
-			<key>title</key>
-			<string>Build target body_10_14</string>
-			<key>uniqueIdentifier</key>
-			<string>E5D1AE84-B9DD-4F5A-B9E2-F94E90868C98</string>
 		</dict>
 		<key>F99736E3-6824-4E81-ACCA-3085063C4327</key>
 		<dict>
